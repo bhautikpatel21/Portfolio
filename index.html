@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- remixicon cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .circle {
+            background: conic-gradient(from 0deg, #FFB400 0%, #FFB400 0% var(--i), #333 var(--i), #333 100%);
+        }
+
+        ;
+    </style>
+</head>
+
+<body id="bodyTag" class="overflow-x-hidden relative dark:bg-[#111111] duration-200 cursor-none ">
+
+
+
+    <!-- preloading screen started  -->
+    <div class="preload fixed h-svh w-full flex justify-center items-center z-[999] overflow-hidden">
+        <div class="w-1/2 bg-[#252525] h-full pre-main1"></div>
+
+        <div class="bg-[#FFB400] h-svh preload-anime absolute"></div>
+
+        <div class="w-1/2 bg-[#252525] h-full pre-main2"></div>
+    </div>
+    <!-- preloading screen ended  -->
+
+
+    <!-- menubar button  -->`
+    <div id="Menu"
+        class="fixed z-[99] top-0 right-0  w-[100px]  bg-slate-200 dark:bg-[#252525] h-full  hidden flex-col justify-center items-center lg:hidden cursor-pointer gap-6 ">
+        <div class="HOME-button link  group duration-600 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-house dark:text-white text-[#222222] text-2xl inline-block p-4"></i>
+        </div>
+        <div class="ABOUT-button link  group duration-1000 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-user dark:text-white text-[#222222] text-2xl inline-block p-4"></i>
+        </div>
+        <div class="PORTFOLIO-button link  group duration-1000 hover:bg-[#FFB400] rounded-full bg-[#00000032] ">
+            <i class="fa-solid fa-briefcase p-4 dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+        <div class="CONTACT-button link  group duration-1000 hover:bg-[#FFB400]  rounded-full bg-[#00000032] ">
+            <i class="fa-solid  fa-address-book p-4 dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+        <div class="BLOG-button link  group duration-1000 hover:bg-[#FFB400]  rounded-full bg-[#00000032] ">
+            <i class="fa-solid  fa-message p-4  dark:text-white text-[#222222] text-2xl inline-block"></i>
+        </div>
+
+        <i class="fa-solid fa-xmark dark:text-white text-[#222222] text-2xl absolute top-6 m-auto link Menu-Close"></i>
+    </div>
+    <!-- menubar button ended -->
+
+
+    <!-- this will customize the cursor of the browser  -->
+    <div class="cursor-ball cursor cursor-none"></div>
+    <div class="cursor-outline cursorOutline"></div>
+
+
+    <i id="MenuButton"
+        class=" link ri-menu-line w-fit fixed right-7  top-7 text-white text-2xl py-2 px-4 bg-[#252525] rounded-md lg:hidden z-[99] duration-75"></i>
+
+    <!-- navigation bar started -->
+    <div class="hidden fixed lg:flex flex-col justify-center top-0 right-6 h-full w-[170px] gap-6 z-50 ">
+        <!-- menu bar  -->
+        <i id="dark-button"
+            class="link fa-solid fa-sun duration-500 fixed right-6 top-24 inline-block text-white text-2xl p-4 bg-[#252525] rounded-full hover:bg-[#FFB400] lg:top-7 z-50 "></i>
+        <!-- menu bar ended  -->
+        <div class="HOME-button link hero-navbar-button group relative rounded-full overflow-hidden">
+            <p class="group-hover:translate-x-[0px] nav-bar-description">HOME</p>
+            <a href="#" class="inline-block z-50 "><i class="fa-solid fa-house  nav-button"></i></a>
+        </div>
+        <div class="ABOUT-button link hero-navbar-button group relative rounded-full overflow-hidden ">
+            <p class="lg:group-hover:translate-x-[0px] nav-bar-description">ABOUT</p>
+            <a href="#" class="inline-block z-50 "><i class="fa-solid fa-user nav-button"></i></a>
+        </div>
+        <div class="PORTFOLIO-button link hero-navbar-button group relative rounded-full overflow-hidden ">
+            <p class="lg:group-hover:translate-x-[0px] nav-bar-description">PORTFOLIO</p>
+            <a href="#" class="inline-block z-50 "><i class="fa-solid fa-briefcase nav-button"></i></a>
+        </div>
+        <div class="CONTACT-button link hero-navbar-button group relative rounded-full overflow-hidden ">
+            <p class="lg:group-hover:translate-x-[0px] nav-bar-description">CONTACT</p>
+            <a href="#" class="inline-block z-50 "><i class="fa-solid fa-address-book nav-button"></i></a>
+        </div>
+        <div class="BLOG-button link hero-navbar-button group relative rounded-full overflow-hidden ">
+            <p class="lg:group-hover:translate-x-[0px] nav-bar-description">BLOG</p>
+            <a href="#" class="inline-block z-50"><i class="fa-solid fa-message nav-button "></i></a>
+        </div>
+
+    </div>
+    <!-- navigation bar ended  -->
+
+
+    <!-- pages started  -->
+    <div class="w-full bg-white  dark:bg-[#111111] -mt-6">
+
+        <!-- hero section  -->
+        <div id="HOME"
+            class="h-svh relative lg:after:block after:content-[''] md:after:w-[30vw] md:h-full after:-left-52 after:absolute after:bg-[#FFB400] after:h-full after:skew-x-[15deg] after:top-0 after:hidden z-10 overflow-hidden ">
+            <!-- main div that hold the content  -->
+            <div
+                class="flex flex-col justify-center h-full  w-full p-6 text-[#666666] dark:text-white lg:grid lg:grid-cols-[35%_65%] lg:items-center ">
+                <img id="hero-image"
+                    class="hidden sm:block h-[270px] w-[270px]  object-cover mx-auto rounded-full mb-8 border-4 border-slate-700 lg:h-[calc(100svh-100px)] lg:my-auto lg:mx-5 lg:w-full lg:rounded-3xl z-20 lg:border-none lg:shadow-hero "
+                    src="./assets/bhautik.jpg" alt="My Profile image">
+                <div class="lg:pl-[10%]">
+                    <div class="mt-8 flex gap-4">
+                        <div class="w-12 h-[5px] rounded-full my-auto bg-[#FFB400] hidden xl:block"></div>
+                        <p class="text-3xl sm:text-4xl lg:text-5xl w-fit sm:max-lg:mx-auto font-bold text-[#FFB400]">I'M
+                            BHAUTIK DUDHAT.</p>
+                    </div>
+                    <div class="">
+                        <p class="text-3xl sm:text-4xl lg:text-5xl w-fit sm:max-lg:mx-auto font-bold mb-4 xl:ml-[64px]">
+                            WEB
+                            DEVELOPER</p>
+                    </div>
+                    <p class="tracking-wider leading-7 max-w-[550px] sm:max-lg:mx-auto ">Full-stack web developer with a
+                        focus on React.js for dynamic, responsive front-ends and Node.js for efficient, scalable
+                        back-ends. Skilled in creating end-to-end web applications that combine seamless user
+                        experiences with robust functionality. Dedicated to leveraging modern technologies to deliver
+                        impactful and high-quality solutions.
+                    </p>
+                    <div
+                        class="ABOUT-button link button-container relative overflow-hidden mt-8 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer sm:max-lg:mx-auto">
+                        <a class="inline-block z-20  px-8 text-base font-bold " href="#">MORE ABOUT ME</a>
+                        <i
+                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold text-[#666666] dark:text-white"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- main div ended  -->
+
+        </div>
+        <!-- hero section ended  -->
+
+        <!-- Resume Section started -->
+        <div id="ABOUT"
+            class="hidden duration-500  md:max-lg:max-w-[720px] lg:w-[calc(100svw-200px)] max-w-[1350px] m-auto ">
+            <!-- heading started  -->
+            <h2
+                class="text-[#666666] w-full dark:text-white text-3xl sm:text-6xl sm:text  relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden">
+                ABOUT <span class="text-[#FFB400] z-20">ME</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full group-hover:scale-125 duration-300 text-9xl items-center justify-center -z-10 opacity-10">
+                    RESUME</p>
+            </h2>
+            <!-- heading ended -->
+            <!-- personal info section started  -->
+            <div class="grid  px-8 lg:grid-cols-2 gap-5">
+                <div class="left-side-info-section">
+                    <p class="text-2xl text-[#666666]  dark:text-white py-7 font-extrabold ">PERSONAL INFOS</p>
+                    <!-- profile image  -->
+                    <div>
+                        <img class="w-60 h-60 object-cover rounded-full m-auto mb-8 border-[5px] border-[#252525] sm:hidden"
+                            src="./assets/hero-section-profile-image.jpg" alt="my Profile image">
+                    </div>
+                    <!-- info section  -->
+                    <div class="grid grid-cols-2">
+                        <div class="left-info">
+                            <p class="text-gray-400 text-base font-semibold mb-5">First Name : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Bhautik</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Last Name : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Dudhat</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Age : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">19
+                                    Years</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Nationality : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Indian</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Freelance : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Available</span></p>
+                        </div>
+                        <div class="right-info">
+                            <p class="text-gray-400 text-base font-semibold mb-5">Address: <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">Surat</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Phone : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">+91 63517 32876</span></p>
+                            <p class="text-gray-400 text-base font-semibold mb-5 pr-3">Email : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block  break-words ">bdudhat293@gmail.com</span>
+                            </p>
+                            <p class="text-gray-400 text-base font-semibold mb-5">Languages : <span
+                                    class="text-[#666666] dark:text-white sm:max-lg:block ">English,Hindi,Gujarati</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- button section  -->
+                    <div
+                        class="link button-container relative overflow-hidden mt-3 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer  text-[#666666]  dark:text-white">
+                        <a class="inline-block z-20  px-8 text-lg font-bold text" href="#">Download CV</a>
+                        <i
+                            class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold text-white"></i>
+                    </div>
+                </div>
+                <div
+                    class="right-side-info-section py-8   text-[#666666] dark:text-white gap-6 flex flex-col sm:flex-row">
+                    <div class="flex-1 ">
+                        <div class="border border-[#202020] p-8 rounded-lg mb-8">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                1</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">YEARS OF <span
+                                        class="block md:inline-block lg:block ">EXPERIENCE</span></p>
+                            </div>
+                        </div>
+                        <div class="border border-[#202020] p-8 rounded-lg">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                1</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">HAPPY <span
+                                        class="block md:inline-block lg:block">CUSTOMERS</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="border border-[#202020] p-8 rounded-lg mb-8">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                13</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">COMPLETED <span
+                                        class="block md:inline-block lg:block">PROJECTS</span></p>
+                            </div>
+                        </div>
+                        <div class="border border-[#202020] p-8 rounded-lg">
+                            <p
+                                class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
+                                3</p>
+                            <div class="flex ">
+                                <div
+                                    class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#363535] shrink-0 hidden md:block">
+                                </div>
+                                <p class="text-base font-medium">AWARDS WON</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- personal info section ended  -->
+
+            <!-- divider -->
+            <hr class="w-1/2 m-auto my-16 max-w-[500px] border-t border-[#242323]">
+            <!-- skills section started   -->
+            <div class="text-[#666666] dark:text-white  text-center">
+                <p class="text-2xl md:text-3xl font-bold mt-8 mb-4">MY SKILLS</p>
+                <!-- skills grid started  -->
+                <div class=" grid grid-cols-2 md:grid-cols-4 h-[970px] md:h-[600px] max-w-[1000px] m-auto pb-8 gap-x-5">
+
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:90%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                90%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">C</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:75%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                75%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">C++</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:60%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                60%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">DSA</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:95%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                95%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">HTML</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:90%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                90%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">CSS</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:65%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                65%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">JAVASCRIPT</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:85%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">SASS</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:85%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">TAILWIND</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:70%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                70%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">BOOTSTRAP</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:75%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                75%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">REACT JS</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:85%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">MYSQL</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:85%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">MONGODB</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:70%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                70%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">NODE JS</p>
+                        </div>
+                    </div>
+                    <div class="box m-auto mb-16">
+                        <div class="circle relative aspect-square rounded-full before:content-[''] before:absolute before:inset-[7px] lg:before:inset-[9px] before:bg-[#111111] before:rounded-full h-32 w-32"
+                            style="--i:85%;">
+                            <p
+                                class="absolute h-full w-full flex justify-center items-center text-2xl font-bold text-white">
+                                85%
+                            </p>
+                            <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">EXPRESS JS</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- skills section ended   -->
+                <!-- divider -->
+                <hr class="w-1/2 m-auto my-16 max-w-[500px] border-t border-[#242323]" id="line">
+
+                <!-- experiences and education section started  -->
+                <div class="about-education">
+                    <p class="text-2xl md:text-3xl font-bold tracking-wide mt-8 mb-16 ">EXPERIENCE & EDUCATION</p>
+                    <div class="grid md:grid-cols-2  px-8 pb-16 gap-10 z-10">
+
+                        <!-- experiences -->
+                        <div class="flex gap-6 text-left ">
+                            <div class="h-full relative overflow-hidden">
+                                <i class="fa-solid fa-suitcase text-base p-3 bg-[#FFB400] rounded-full "></i>
+                                <p class=" before:content-[''] before:absolute top-0 before:h-full before:w-[3px] 
+                                before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
+                            </div>
+                            <div class="flex-1">
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2023-24</p>
+                                <p class="text-xl font-semibold">WEB DEVELOPER <span class="text-slate-300 text-lg">-
+                                        Skillqode</span></p>
+                                <p class="mt-3 font-normal text-base">I completed Web Developer's course in Skillqode in
+                                    2024</p>
+                            </div>
+                        </div>
+                        <!-- education -->
+                        <div class="flex gap-6 text-left ">
+                            <div class="h-full relative overflow-hidden">
+                                <i class="fa-solid fa-graduation-cap text-base p-3 bg-[#FFB400] rounded-full "></i>
+                                <p class=" before:content-[''] before:absolute top-0 before:h-full before:w-[3px] 
+                                before:left-[calc(50%-1.5px)] before:bg-[#242323] before:rounded-full"></p>
+                            </div>
+                            <div class="flex-1">
+                                <p
+                                    class="bg-[#202020] w-fit p-1 px-3 rounded-full text-sm font-semibold mt-1 mb-4 text-slate-300">
+                                    2024-PRESENT</p>
+                                <p class="text-xl font-semibold">BSC IT <span class="text-slate-300 text-lg">-
+                                        Baou</span></p>
+                                <p class="mt-3 font-normal text-base">I am doing Bsc.it in babasaheb ambedkar open
+                                    university</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- experiences and education section ended  -->
+
+            </div>
+            <!-- Resume Section ended -->
+        </div>
+        <!-- Resume Section ended  -->
+
+        <!-- Portfolio section started  -->
+        <div id="PORTFOLIO" class="hidden min-h-svh lg:w-[calc(100svw-200px)] mx-auto">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                MY <span class="text-[#FFB400] z-20">PORTFOLIO</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    WORKS</p>
+            </h2>
+            <!-- Portfolio grid section  -->
+            <div
+                class=" grid sm:grid-cols-2 sm:max-w-[768px] lg:grid-cols-3 lg:grid-rows-3 p-6  m-auto lg:max-w-[1340px] gap-8 py-14">
+
+                <div class="Portfolio-website relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img1.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        My Portfolio</p>
+                </div>
+
+                <div class="ice-cream relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img2.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        Jummy ice-cream web</p>
+                </div>
+
+                <div class="megaOne-website relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img3.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        MegaOne website</p>
+                </div>
+
+                <div class="Furniture-app relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img4.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        Furniture app</p>
+                </div>
+
+                <div class="Calculater relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img6.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        Calculater</p>
+                </div>
+
+                <div class="TypeScipt relative overflow-hidden group cursor-pointer rounded-xl">
+                    <img class=" h-full w-full " src="./assets/img-5.png" alt="project">
+                    <p
+                        class="project-button link content-['IMAGE_PROJECT'] absolute -top-full w-full bg-[#FFB400] h-full group-hover:top-0 origin-top duration-500 text-white m-auto flex justify-center items-center text-xl font-semibold">
+                        TypeScipt Project </p>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Portfolio section ended  -->
+
+        <!-- contact section started here  -->
+        <div id="CONTACT"
+            class="mx-auto min-h-svh md:max-lg:max-w-[720px] lg:w-[calc(100svw-200px)] max-w-[1250px] hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                GET IN <span class="text-[#FFB400] z-20 ml-3 ">TOUCH</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    CONTACT</p>
+            </h2>
+
+            <div class="grid lg:grid-cols-3 p-6 gap-8 mt-10">
+                <div class=" dark:text-white text-[#222222]">
+                    <p class="text-xl sm:text-2xl  lg:text-3xl font-extrabold">DON'T BE SHY!</p>
+                    <p class="text-base mt-5 font-medium">Feel free to get in touch with me. I am always open to
+                        discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="flex items-center gap-6 mt-8 ">
+                        <i class="fa-solid fa-envelope-open text-3xl text-[#FFB400]"></i>
+                        <div>
+                            <p class="text-slate-800 dark:text-slate-200 text-base">MAIL ME</p>
+                            <p class="text-sm font-bold">bdudhat293@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 ">
+                        <i class="fa-solid fa-phone text-3xl text-[#FFB400]"></i>
+                        <div>
+                            <p class="text-slate-800 dark:text-slate-200 text-base">CALL ME</p>
+                            <p class="text-sm font-bold">+91 63517 32876</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 ">
+                        <i class="fa-brands fa-whatsapp text-3xl text-[#FFB400]"></i>
+                        <div>
+                            <p class="text-slate-800 dark:text-slate-200 text-base">WHATSAPP</p>
+                            <p class="text-sm font-bold">+91 63517 32876</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2  lg:px-8 w-full">
+                    <div>
+                        <div
+                            class="grid sm:grid-cols-3 gap-y-8 dark:*:bg-[#252525] gap-x-[2.5vw] *:py-3 *:rounded-full *:px-5 *:text-base *:text-slate-800 *:dark:text-slate-200 *:border-2 *:border-slate-700 *:dark:border-none  *:font-light">
+                            <input type="text" id="user-name" placeholder="YOUR NAME"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                            <input type="email" id="user-email" placeholder="YOUR EMAIL"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                            <input type="text" id="user-subject" placeholder="YOUR SUBJECT"
+                                class="flex-1 dark:text-white  focus:outline-[#FFB400]">
+                        </div>
+                        <textarea name="Massage" id="mail"
+                            class="min-h-[200px] mt-9 w-full rounded-3xl text-[#252525] dark:text-white dark:bg-[#252525] bg-white p-5  border-2 border-slate-700 dark:border-none focus:outline-[#FFB400] "
+                            placeholder="YOUR MESSAGE"></textarea>
+                        <button
+                            class="button-container relative overflow-hidden mt-8 border-[#FFB400] border w-fit rounded-full flex items-center cursor-pointer max-lg:mx-auto text-[#666666] dark:text-white">
+                            <p class="inline-block z-20  px-8 text-base font-bold">send message</p>
+                            <i
+                                class="fa-solid fa-arrow-right z-40 bg-[#FFB400] text-2xl p-4 rounded-full font-extrabold ">
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- contact section ended here  -->
+
+        <!-- blog section started here  -->
+        <div id="BLOG"
+            class="mx-auto min-h-svh md:max-lg:max-w-[750px] lg:w-[calc(100svw-200px)] max-w-[1200px] overflow-x-hidden hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 lg:pt-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                MY <span class="text-[#FFB400] z-20 ml-3 ">BLOGS</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    POSTS</p>
+            </h2>
+            <div id="NumberOne"
+                class="blog-grid grid md:grid-cols-2 xl:grid-cols-3 p-8 text-[#666666] dark:text-white gap-8">
+                <div
+                    class="blog-card-1 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-1.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">How to Own Your Audience by Creating an
+                            Email List</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-2 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-2.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Top 10 Toolkits for Deep Learning in 2020
+                        </p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-3 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-3.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Everything You Need to Know About Web
+                            Accessibility</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="NumberTwo"
+                class="hidden blog-grid  md:grid-cols-2 xl:grid-cols-3 p-8 text-[#666666] dark:text-white gap-8">
+                <div
+                    class="blog-card-4 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-4.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">How to Inject Humor & Comedy Into Your
+                            Brand</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-5 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-5.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Women in Web Design: How To Achieve
+                            Success</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+                <div
+                    class="blog-card-6 shadow-sm cursor-pointer grid group grid-rows-[55%_45%] md:grid-rows-[50%_50%] h-[480px] lg:h-[420px] bg-[#F2F2F2] dark:bg-[#252525] rounded-md overflow-hidden  mx-auto sm:max-w-[480px]">
+                    <div
+                        class="after:content-[''] relative after:absolute after:h-[4px] after:bottom-0 after:bg-[#FFB400] after:z-50 after:w-full overflow-hidden">
+                        <img src="./assets/blog-post-6.jpg" class="h-full w-full group-hover:scale-125 duration-300"
+                            alt="blog image">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xl font-bold link hover:text-[#FFB400]">Evergreen versus topical content: An
+                            overview</p>
+                        <p class="text-lg font-normal my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore ...</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center gap-7">
+
+                <button id="blog-button-one"
+                    class=" py-3 px-5 dark:text-white text-lg rounded-full font-bold link  bg-[#FFB400]">1</button>
+                <button id="blog-button-two"
+                    class=" py-3 px-5 dark:text-white text-lg rounded-full font-bold link  bg-[#c4a35731]">2</button>
+            </div>
+        </div>
+        <!-- blog section ended here  -->
+
+
+        <!-- blog full page started  -->
+        <div id="Blog-Description"
+            class="fixed h-full w-full dark:bg-[#111111] mx-auto  overflow-x-hidden text-[#666666] dark:text-white hidden">
+            <h2
+                class="text-[#666666] w-full  dark:text-white text-2xl sm:text-[56px] relative font-extrabold p-4 bg-[#252525] sm:bg-transparent sm:text-center sm:py-20 lg:pt-20 z-20 overflow-hidden flex sm:justify-center sm:items-center">
+                MY <span class="text-[#FFB400] z-20 ml-3 ">BLOGS</span>
+                <p
+                    class=" hidden sm:flex absolute top-0 h-full w-full text-[110px]  tracking-[12px] items-center justify-center -z-10 opacity-10">
+                    POSTS</p>
+            </h2>
+            <div class=" max-w-[900px] m-auto px-9 my-8">
+                <div class="flex sm:items-center gap-6 max-sm:flex-col items-start">
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-user text-[#FFB400]"></i>
+                        <p class="Blog-Writer-name">Steve</p>
+                    </div>
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-calendar-days text-[#FFB400]"></i>
+                        <p class="Blog-date">09 December 2023</p>
+                    </div>
+                    <div class="text-sm flex gap-2 items-center">
+                        <i class="fa-solid fa-tag text-[#FFB400]"></i>
+                        <p class="Blog-text">wordpress, business, economy, design</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" max-w-[900px] m-auto px-9 mb-16">
+                <p class="text-2xl md:text-5xl font-bold blog-tittle ">Top 10 Toolkits For Deep Learning In 2020</p>
+                <img src="./assets/blog-post-1.jpg" alt="blog-image" class="my-8 rounded-xl blog-image">
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi
+                    natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis
+                    officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?
+                </p>
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi
+                    natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis
+                    officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?
+                </p>
+                <p class="text-base mb-3 font-noramal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quibusdam, quasi exercitationem at vitae esse nihil voluptatibus aliquam consequuntur quidem commodi
+                    natus nostrum id ad in et sint quo illum autem vero explicabo ex accusamus optio magni a. Nobis
+                    officiis laboriosam culpa animi sit similique, facilis fuga, repudiandae doloremque illum quidem?
+                </p>
+            </div>
+        </div>
+        <!-- blog full page ended  -->
+
+
+        <!-- website project-Description container started  -->
+        <div
+            class="Description fixed top-0 bg-[#000000b8] w-full h-full z-[99]  justify-center items-center  m-auto hidden ">
+            <div
+                class="w-full max-lg:h-full lg:h-[700px] lg:w-[800px]  bg-[#242424] relative  lg:rounded-2xl overflow-hidden">
+                <i id="Project-close-button"
+                    class="fa-solid fa-xmark absolute right-6 top-6 text-2xl text-white link"></i>
+                <div class="h-full px-5 lg:px-8  mx-auto max-w-[800px] w-full text-white flex flex-col justify-center">
+                    <p class="text-[#FFB400] font-bold text-2xl">PROJECT INFORMATION</p>
+                    <div class="grid mt-8 sm:grid-cols-2 ml-2 gap-x-4">
+                        <div class="flex w-full gap-3 items-center">
+                            <i class="fa-solid fa-file-invoice text-base w-[23px] inline-block"></i>
+                            <p class="w-full text-base font-medium my-1">Project : <span id="website-name"
+                                    class="font-semibold text-[15px]">Website</span></p>
+                        </div>
+                        <div class="flex max-sm:w-[300px] gap-3 items-center">
+                            <i class="fa-solid fa-user text-base w-[23px] inline-block"></i>
+                            <p class="w-full text-base font-medium my-1">Client : <span id="client-name"
+                                    class="font-semibold text-[15px]">Envato</span></p>
+                        </div>
+                        <div class="flex max-sm:w-[300px] gap-3 items-center">
+                            <i class="fa-solid fa-code text-base  w-[23px] inline-block"></i>
+                            <p class="w-full text-base font-medium my-1">Languages : <span
+                                    class="font-semibold text-[15px]" id="Languages">HTML,CSS,JAVASCRIPT</span></p>
+                        </div>
+                        <div class="flex max-sm:w-[300px] gap-3 items-center">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-base  w-[23px] inline-block"></i>
+                            <p class="w-full text-base font-medium my-1">Preview : <span
+                                    class=" text-[15px] link text-[#FFB400] font-bold hover:text-blue-300"
+                                    id="website-link">Nike Website</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="img-container mt-6 mx-auto">
+                        <img class="rounded-xl" src="" alt="Nike website photo" id="Project-Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- website project-Description container ended  -->
+
+    </div>
+    <!-- pages ended  -->
+
+
+
+
+    <!-- this is div for page-transition -->
+    <div id="tr-1" class="hidden fixed top-0 bottom-0 left-0 w-svw overflow-hidden h-svh z-[99]">
+        <div class=" page-trans1 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+        <div class=" page-trans2 h-[100svh] relative bg-[#111111] z-50 w-full "></div>
+        <div class=" page-trans3 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+        <div class=" page-trans4 h-[100svh] relative bg-[#111111] z-50 w-full "></div>
+        <div class=" page-trans5 h-[100svh] relative bg-[#FFB400] z-50 w-full "></div>
+    </div>
+    <!-- transition div ended  -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
