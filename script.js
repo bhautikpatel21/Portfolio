@@ -208,7 +208,7 @@ portfolioWebsite.addEventListener("click", () => {
     languages.innerText = "html,css,javascript";
     preview.innerText = "Portfolio";
     preview.addEventListener("click", () => {
-        open("https://github.com/bhautikpatel21/Portfolio_Tailwind");
+        open("https://github.com/bhautikpatel21/Portfolio.git");
     });
     ProjectImage.src = "./assets/img1.png";
 
